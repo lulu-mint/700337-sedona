@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+<div class="wrapper">
 <header>
-  <nav>
-    <ul class="main-nav">
+  <nav class="main-nav">
+    <a class="current"><img src="img/logo.svg" width="100" height="50" alt="Седона"></a>
+    <ul>
       <li><a href="info.html">Информация</a></li>
       <li><a href="gallery.html">Фото и видео</a></li>
-      <li><a class="current"><img src="img/logo.svg" width="100" height="50" alt="Седона"></a></li>
       <li><a href="map.html">Карта штата</a></li>
       <li><a href="hotels.html">Гостиницы</a></li>
     </ul>
@@ -26,40 +30,47 @@
     <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
 
     <ul class="features-list">
-      <li class="features-item">
+      <li class="features-item features-item-blue">
         <h3>Настоящий городок</h3>
         <span>— №1 —</span>
         <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-        <ul class="features-sub-list">
-          <li class="features-sub-item">
-            <h3>Жильё</h3>
-            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-          </li>
-          <li class="features-sub-item">
-            <h3>Еда</h3>
-            <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-          </li>
-          <li class="features-sub-item">
-            <h3>Сувениры</h3>
-            <p>Не только китайского, но и местного производства!</p>
-          </li>
-        </ul>
+        <!--<img src="img/accomodation.jpg">-->
       </li>
+
       <li class="features-item">
+        <h3>Жильё</h3>
+        <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+      </li>
+
+      <li class="features-item">
+        <h3>Еда</h3>
+        <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+      </li>
+
+      <li class="features-item">
+        <h3>Сувениры</h3>
+        <p>Не только китайского, но и местного производства!</p>
+      </li>
+
+      <li class="features-item features-item-blue">
         <h3>Там есть Мост дьявола</h3>
         <span>— №2 —</span>
         <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        <!--<img src="img/canyon.jpg">-->
       </li>
+
       <li class="features-item">
         <h3>Небольшая площадь</h3>
         <span>— №3 —</span>
         <p>Все достопримечательности находятся очень близко</p>
       </li>
+
       <li class="features-item">
         <h3>Красивая дорога</h3>
         <span>— №4 —</span>
         <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
       </li>
+
       <li class="features-item">
         <h3>Мало туристов</h3>
         <span>— №5 —</span>
@@ -69,6 +80,7 @@
   </section>
 
   <section class="search-by-date">
+    <h2 class="visually-hidden">Поиск и бронирование</h2>
     <h3>Заинтересовались?</h3>
     <p>Укажите предполагаемые даты поездки,
       и мы покажем вам лучшие предложения гостиниц в Cедоне.</p>
@@ -90,12 +102,12 @@
 <footer>
   #visitsedona
   <ul class="social">
-    <li>Twitter</li>
-    <li>Facebook</li>
-    <li>YouTube</li>
+    <li><a href="#">Twitter</a>Twitter</li>
+    <li><a href="#">Facebook</a></li>
+    <li><a href="#">YouTube</a></li>
   </ul>
-  Website by htmlacademy
+  <a href="#">Website by htmlacademy</a>
 </footer>
-
+</div>
 </body>
 </html>
