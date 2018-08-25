@@ -20,7 +20,8 @@ a {
 .wrapper{
   width: 1200px;
   margin: 0 auto;
-  border: 1px solid red;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-color: #ffffff;
 }
 .main-nav{
   font-size: 14px;
@@ -29,6 +30,7 @@ a {
   color: #000000;
 
   background-color: #ffffff;
+  display:flex;
 }
 
 .main-nav ul{
