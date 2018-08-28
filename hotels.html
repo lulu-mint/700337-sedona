@@ -7,121 +7,158 @@
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
 <div class="wrapper">
-<header>
-  <nav class="main-nav">
-    <a class="logo" href="index.html"><img src="img/logo.svg" width="100" height="50" alt="Седона"></a>
-    <ul>
-      <li><a href="info.html">Информация</a></li>
-      <li><a href="gallery.html">Фото и видео</a></li>
-      <li><a href="map.html">Карта штата</a></li>
-      <li><a class="current">Гостиницы</a></li>
+  <header>
+    <nav class="main-nav">
+      <a class="logo" href="index.html"><img src="img/logo.svg" width="140" height="70" alt="Седона"></a>
+      <ul>
+        <li><a href="info.html">Информация</a></li>
+        <li><a class="current">Гостиницы</a></li>
+        <li><a href="gallery.html">Фото и видео</a></li>
+        <li><a href="map.html">Карта штата</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="visually-hidden">Гостиницы Седоны</h1>
+    <section class="filters">
+      <h2 class="visually-hidden">Критерии поиска отелей</h2>
+      <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+
+        <fieldset>
+          <legend>Инфраструктура</legend>
+          <ul>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox"
+                     type="checkbox" name="pool" id="filter-pool" checked>
+              <label for="filter-pool">Бассейн</label></li>
+            <li class="filter-option">
+
+              <input class="visually-hidden filter-input filter-input-checkbox"
+                     type="checkbox" name="parking" id="filter-parking">
+              <label for="filter-parking">Парковка</label></li>
+            <li class="filter-option">
+
+              <input class="visually-hidden filter-input filter-input-checkbox"
+                     type="checkbox" name="wifi" id="filter-wifi">
+              <label for="filter-wifi">Wi-Fi</label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>Тип жилья</legend>
+          <ul>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox"
+                     type="checkbox" name="hotel" id="filter-hotel" checked>
+              <label for="filter-hotel">Гостиница</label></li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox"
+                     type="checkbox" name="motel" id="filter-motel" checked>
+              <label for="filter-motel">Мотель</label></li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox"
+                     type="checkbox" name="apartments" id="filter-apartments" checked>
+              <label for="filter-apartments">Апартаменты</label></li>
+          </ul>
+        </fieldset>
+
+        <div class="right">
+          <div>Стоимость в сутки</div>
+          <button type="submit">Показать</button>
+        </div>
+
+      </form>
+    </section>
+
+    <section class="filters-result">
+
+      <div class="sort-results">
+        <span class="caption">Найдено: 3</span>
+        <p>Сортировка:</p>
+        <ul>
+          <li><a class="current" href="#">по цене</a></li>
+          <li><a href="#">по типу</a></li>
+          <li><a href="#">по рейтингу</a></li>
+        </ul>
+      </div>
+
+      <div class="accomodation-preview">
+        <img src="img/amara.jpg" width="135" height="90">
+        <div class="ap-column">
+          <h3><a class="caption-link" href="#">Amara Resort & Spa</a></h3>
+          <div>
+            <span>Гостиница</span>
+            <span>от 4000 Р.</span>
+          </div>
+          <div>
+          <a class="button button-blue" href="#">Подробнее</a>
+          <a class="button button-brown" href="#">Забронировать</a>
+          </div>
+        </div>
+        <div class="ap-column">
+          <span>****</span>
+          <span class="rate">Рейтинг:8,5</span>
+        </div>
+      </div>
+
+      <div class="accomodation-preview">
+        <img src="img/desert.jpg" width="135" height="90">
+        <div class="ap-column">
+          <h3><a class="caption-link" href="#">Desert Quail Inn</a></h3>
+          <div>
+            <span>Мотель</span>
+            <span>от 3000 Р.</span>
+          </div>
+          <div>
+            <a class="button button-blue" href="#">Подробнее</a>
+            <a class="button button-brown" href="#">Забронировать</a>
+          </div>
+        </div>
+        <div class="ap-column">
+          <span>***</span>
+          <span class="rate">Рейтинг:8,9</span>
+        </div>
+      </div>
+
+      <div class="accomodation-preview">
+        <img src="img/poco.jpg" width="135" height="90">
+        <div class="ap-column">
+          <h3><a class="caption-link" href="#">Villas at Poco Diablo</a></h3>
+          <div>
+            <span>Апартаменты</span>
+            <span>от 2000 Р.</span>
+          </div>
+          <div>
+            <a class="button button-blue" href="#">Подробнее</a>
+            <a class="button button-brown" href="#">Забронировать</a>
+          </div>
+        </div>
+        <div class="ap-column">
+          <span>**</span>
+          <span class="rate">Рейтинг:9,2</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+
+    <span>#visitsedona</span>
+
+    <ul class="social">
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">YouTube</a></li>
     </ul>
-  </nav>
-</header>
 
-<main>
-  <h1 class="visually-hidden">Гостиницы Седоны</h1>
-  <section class="filters">
-    <h2 class="visually-hidden">Критерии поиска отелей</h2>
-    <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-      <fieldset>
-        <legend>Инфраструктура</legend>
-        <ul>
-          <li class="filter-option">
-            <input class="visually-hidden filter-input filter-input-checkbox"
-                   type="checkbox" name="pool" id="filter-pool" checked>
-            <label for="filter-pool">Бассейн</label></li>
-          <li class="filter-option">
+    <div class="link-academy">Website by <a href="#">
+      <img src="img/logo-htmlacademy.svg" width="115" height="43"></a></div>
 
-            <input class="visually-hidden filter-input filter-input-checkbox"
-                   type="checkbox" name="parking" id="filter-parking">
-            <label for="filter-parking">Парковка</label></li>
-          <li class="filter-option">
-
-            <input class="visually-hidden filter-input filter-input-checkbox"
-                   type="checkbox" name="wifi" id="filter-wifi">
-            <label for="filter-wifi">Wi-Fi</label></li>
-        </ul>
-      </fieldset>
-      <fieldset>
-        <legend>Тип жилья</legend>
-        <ul>
-          <li class="filter-option">
-            <input class="visually-hidden filter-input filter-input-checkbox"
-                   type="checkbox" name="hotel" id="filter-hotel" checked>
-            <label for="filter-hotel">Гостиница</label></li>
-          <li class="filter-option">
-            <input class="visually-hidden filter-input filter-input-checkbox"
-                   type="checkbox" name="motel" id="filter-motel" checked>
-            <label for="filter-motel">Мотель</label></li>
-          <li class="filter-option">
-            <input class="visually-hidden filter-input filter-input-checkbox"
-                   type="checkbox" name="apartments" id="filter-apartments" checked>
-            <label for="filter-apartments">Апартаменты</label></li>
-        </ul>
-      </fieldset>
-      <fieldset>
-    Стоимость в сутки
-      </fieldset>
-    <button type="submit">Показать</button>
-    </form>
-  </section>
-
-  <section class="filters-result">
-    Найдено:
-
-    Сортировка:
-    <a href="#">по цене</a>
-    <a href="#">по типу</a>
-    <a href="#">по рейтингу</a>
-  </section>
-
-  <div>
-    <img src="img/amara.jpg">
-    Amara Resort & Spa
-    Гостиница
-    от 4000 Р.
-    Подробнее
-    Забронировать
-    <span>****</span>
-    Рейтинг:8,5
-  </div>
-
-  <div>
-    <img src="img/desert.jpg">
-    Desert Quail Inn
-    Мотель
-    от 3000 Р.
-    Подробнее
-    Забронировать
-    <span>***</span>
-    Рейтинг:8,9
-  </div>
-
-  <div>
-    <img src="img/poco.jpg">
-    Villas at Poco Diablo
-    Апартаменты
-    от 2000 Р.
-    Подробнее
-    Забронировать
-    <span>**</span>
-    Рейтинг:9,2
-  </div>
-
-</main>
-
-<footer>
-  #visitsedona
-  <ul class="social">
-    <li><a href="#">Twitter</a></li>
-    <li><a href="#">Facebook</a></li>
-    <li><a href="#">YouTube</a></li>
-  </ul>
-  <a href="#">Website by htmlacademy</a>
-</footer>
+  </footer>
 </div>
 </body>
 </html>

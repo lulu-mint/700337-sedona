@@ -1,4 +1,4 @@
-body{
+body {
   margin: 0;
   padding: 0;
 
@@ -6,7 +6,7 @@ body{
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
-  color:#333333;
+  color: #333333;
   text-transform: uppercase;
 
   background-color: #f2f2f2;
@@ -27,62 +27,79 @@ a {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.wrapper{
+
+.wrapper {
   min-width: 768px;
   max-width: 1200px;
   margin: 0 auto;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
   position: relative;
+  box-sizing: border-box;
 }
-.main-nav{
+
+.main-nav {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
 
   background-color: #ffffff;
-  display:flex;
+  display: flex;
 }
-.main-nav .logo{
-  position: absolute;
-  top:0;
-  left:46%;
-}
-.main-nav ul{
+
+.main-nav .logo {
   margin: 0;
-  padding: 10px 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 44%;
+}
+
+.main-nav ul {
+  margin: 0;
+  padding: 10px 5%;
 
   width: 100%;
   list-style: none;
-  border: 1px solid red;
 }
-.main-nav li{
-  margin: 0;
-  padding: 0 5%;
 
-  width: 115px;
+.main-nav li {
+  margin: 0;
+  margin-right: 7%;
+  padding: 0;
+
+  width: 120px;
   float: left;
 }
-.main-nav li:nth-child(even){
+
+.main-nav li:nth-child(even) {
   text-align: right;
   float: right;
+  margin-left: 7%;
+  margin-right: 0;
 }
-.main-nav a{
+
+.main-nav a {
   font: inherit;
 }
-.main-nav a:hover{
+
+.main-nav a:hover {
   color: #81b3d2;
 }
-.main-nav a:active{
-  color: rgba(0,0,0,0.3);
+
+.main-nav a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
-.main-nav a.current{
+
+.main-nav a.current {
   color: #766357;
   pointer-events: none;
 }
+
 /* ГЛАВНОЕ ФОТО СТРАНИЦЫ */
-.sedona-view{
+.sedona-view {
   margin: 0;
   padding: 0;
 
@@ -92,21 +109,23 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 75px;
+  box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.welcome{
+
+.welcome {
   background-image: url("../img/welcome.png");
   width: 459px;
   height: 353px;
   margin: 0 auto;
-
-  border: 1px solid red;
+  padding: 0;
 }
+
 /* КВАДРАТИКИ */
-.features-text{
+.features-text {
   margin: 0 auto;
   width: 566px;
   padding: 0 10px;
@@ -115,7 +134,8 @@ a {
 
   border: 1px solid red;
 }
-.features-text .caption{
+
+.features-text .caption {
   margin: 0;
   padding: 0;
   padding-top: 10px;
@@ -124,7 +144,8 @@ a {
   font-weight: 700;
   color: #000000;
 }
-.features-text p{
+
+.features-text p {
   margin: 0;
   padding: 0;
   padding-top: 30px;
@@ -142,11 +163,11 @@ a {
 }
 
 .features-item,
-.features-item div.blue{
+.features-item div.blue {
   margin: 0;
   text-align: center;
   min-height: 255px;
-  width:33.33%;
+  width: 33.33%;
   box-sizing: border-box;
   border: 1px solid red;
 
@@ -164,7 +185,8 @@ a {
   line-height: 21px;
   color: #000000;
 }
-.features-item p{
+
+.features-item p {
   margin: 0;
   padding: 0;
 
@@ -172,7 +194,8 @@ a {
   line-height: 21px;
   border: 1px solid red;
 }
-.features-item-blue{
+
+.features-item-blue {
   margin: 0;
   padding: 0;
 
@@ -180,14 +203,17 @@ a {
   flex-direction: row;
   width: 100%;
 }
-.features-item-blue h3{
+
+.features-item-blue h3 {
   color: #ffffff;
 }
+
 .features-item div.blue {
   background-color: #81b3d2;
   color: #ffffff;
 }
-.img-accomodation{
+
+.img-accomodation {
   background-image: url("../img/accomodation.jpg");
   width: 66.67%;
   height: auto;
@@ -196,7 +222,7 @@ a {
   background-position: center;
 }
 
-.img-canyon{
+.img-canyon {
   background-image: url("../img/canyon.jpg");
   width: 66.67%;
   height: auto;
@@ -204,16 +230,18 @@ a {
   background-size: cover;
   background-position: center;
 }
-.features-item-blue:first-of-type{
-  order:-2;
+
+.features-item-blue:first-of-type {
+  order: -2;
 }
-.middle{
-  order:-1;
+
+.middle {
+  order: -1;
 }
 
 /* ЗАИНТЕРЕСОВАЛИСЬ? ФОРМА БРОНИ */
 
-.text-box{
+.text-box {
   margin: 0 auto;
   padding: 0;
 
@@ -222,7 +250,8 @@ a {
 
   border: 1px solid red;
 }
-.text-box h3{
+
+.text-box h3 {
   margin: 0;
   padding: 0;
 
@@ -230,14 +259,16 @@ a {
   line-height: 36px;
   color: #000000;
 }
-.text-box p{
+
+.text-box p {
   margin: 0;
   padding: 0;
 
   font-size: 14px;
   line-height: 24px;
 }
-.date{
+
+.date {
   margin: 0 auto;
   padding: 0;
 
@@ -245,7 +276,7 @@ a {
 }
 
 /* ПОДВАЛЬЧЕГ */
-footer{
+footer {
   margin: 0;
   padding: 0;
 
@@ -254,15 +285,218 @@ footer{
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  background-color: rgba(255,255,2550.7);
 }
-.social{
+
+.social {
   list-style: none;
+  display: flex;
 }
-.link-academy{
+.social li{
+  margin: 4px;
+}
+.social li:nth-child(3n){
+  margin-right: 0;
+}
+.link-academy {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 
   border: 1px solid red;
+}
+
+/* ФИЛЬТРЫ */
+.filters {
+  margin: 0;
+  padding: 0 4%;
+
+  background-image: url("../img/filter-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  color: #ffffff;
+}
+
+.filter {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.filter fieldset {
+  margin: 30px 0;
+  margin-right: 10%;
+  border: none;
+}
+
+.filter legend {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.filter ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  font-size: 14px;
+  line-height: 21px;
+}
+.filter li{
+  margin-top: 25px;
+}
+.filter-input:hover + label,
+.filter-input:focus + label {
+  color: #ffffff;
+}
+
+.filter-input:disabled + label {
+  color: rgba(255, 255, 255, 0.35);
+}
+.filter div.right{
+  margin: 30px 0;
+  margin-left: auto;
+}
+.filter button{
+  margin: 0;
+  padding: 0;
+
+  width: 138px;
+  height: 38px;
+  text-align: center;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  text-transform: uppercase;
+}
+.filter button:hover,
+.filter button:active{
+  background-color: #ffffff;
+  color: rgba(0,0,0,1);
+}
+.sort-results{
+  margin: 0;
+  padding: 35px 5%;
+  display: flex;
+}
+.sort-results .caption{
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  margin-right: 45px;
+}
+.sort-results p{
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+  margin-right: 38px;
+}
+.sort-results ul{
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  display: flex;
+  align-items: flex-end;
+}
+.sort-results li{
+  margin-right: 34px;
+}
+.sort-results a{
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(0,0,0,0.3);
+  border-bottom: 1px dotted #81b3d2;
+}
+.sort-results a:hover{
+  color: #81b3d2;
+}
+.sort-results a:active{
+  color: #000000;
+  border: none;
+}
+.sort-results a.current{
+  color: #81b3d2;
+  border: none;
+}
+/* ОФОРМЛЕНИЕ "КАРТОЧЕК" ОТЕЛЕЙ */
+.accomodation-preview{
+  margin: 0;
+  padding: 30px 5%;
+  display: flex;
+  border-top: 1px solid #e5e5e5;
+}
+.accomodation-preview:last-of-type{
+  border-bottom: 1px solid #e5e5e5;
+}
+.accomodation-preview img{
+  margin: 0;
+  padding: 0;
+  padding-right: 30px;
+}
+.accomodation-preview .ap-column{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.accomodation-preview .ap-column:last-of-type{
+  margin-left: auto;
+}
+.accomodation-preview h3{
+  margin: 0;
+  padding: 0;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.accomodation-preview .caption-link:hover{
+  color: #81b3d2;
+}
+.accomodation-preview .caption-link:active{
+  color: rgba(0,0,0,0.3);
+}
+
+
+
+
+/* КНОПОЩКИ */
+
+.button{
+  margin: 0;
+  padding: 5px 17px;
+
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.button-blue{
+  background-color: #81b3d2;
+}
+.button-brown{
+  background-color: #766357;
+}
+.button-blue:hover{
+  background-color: #669ec0;
+}
+.button-blue:active{
+  background-color: #5496bd;
+  color: rgba(255,255,255,0.3);
+}
+.button-brown:hover{
+  background-color: #604e43;
+}
+.button-brown:active{
+  background-color: #503e33;
+  color: rgba(255,255,255,0.3);
 }
