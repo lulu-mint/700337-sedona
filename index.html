@@ -35,16 +35,16 @@
 
     <section class="features">
       <div class="features-text">
-      <h2 class="visually-hidden">Преимущества</h2>
-      <p class="caption">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-      <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        <h2 class="visually-hidden">Преимущества</h2>
+        <p class="caption">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </div>
 
       <ul class="features-list">
         <li class="features-item features-item-blue">
           <div class="blue">
             <h3>Настоящий городок</h3>
-            <span>— №1 —</span>
+            <span class="feature-number">— №1 —</span>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
           <div class="img-accomodation"><span class="visually-hidden">Фото городка</span></div>
@@ -55,42 +55,42 @@
           <div class="blue">
             <h3>Там есть<br>
               Мост дьявола</h3>
-            <span>— №2 —</span>
+            <span class="feature-number">— №2 —</span>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
         </li>
 
         <li class="features-item">
           <h3>Небольшая площадь</h3>
-          <span>— №3 —</span>
+          <span class="feature-number">— №3 —</span>
           <p>Все достопримечательности находятся очень близко</p>
         </li>
 
         <li class="features-item">
           <h3>Красивая дорога</h3>
-          <span>— №4 —</span>
+          <span class="feature-number">— №4 —</span>
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
 
         <li class="features-item">
           <h3>Мало туристов</h3>
-          <span>— №5 —</span>
+          <span class="feature-number">— №5 —</span>
           <p>Большинство едет в гранд каньон и толпится там</p>
         </li>
 
         <li class="middle">
           <ul class="features-list">
-            <li class="features-item">
+            <li class="features-item features-item-middle pic-house">
               <h3>Жильё</h3>
               <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </li>
 
-            <li class="features-item">
+            <li class="features-item features-item-middle pic-burger">
               <h3>Еда</h3>
               <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
 
-            <li class="features-item">
+            <li class="features-item features-item-middle pic-present">
               <h3>Сувениры</h3>
               <p>Не только китайского, но и местного производства!</p>
             </li>
@@ -101,30 +101,39 @@
 
     <section class="search-by-date">
       <div class="text-box">
-      <h2 class="visually-hidden">Поиск и бронирование</h2>
-      <h3>Заинтересовались?</h3>
-      <p>Укажите предполагаемые даты поездки,<br>
-        и мы покажем вам лучшие предложения гостиниц в Cедоне.</p>
-      <button type="button">
-        Поиск гостиницы в Седоне
-      </button>
+        <h2 class="visually-hidden">Поиск и бронирование</h2>
+        <h3>Заинтересовались?</h3>
+        <p>Укажите предполагаемые даты поездки,<br>
+          и мы покажем вам лучшие предложения гостиниц в Cедоне.</p>
+        <button class="button-date-search button-brown" type="button">
+          Поиск гостиницы в Седоне
+        </button>
       </div>
 
       <form class="date" method="get" action="https://echo.htmlacademy.ru">
         <fieldset>
-        <label>Дата заезда:
-        <input type="date">
-        </label>
-        <label>Дата выезда:
-        <input type="date">
-        </label>
-        <label>Взрослые:
-        <input type="text">
-        </label>
-        <label>Дети:
-          <input type="text">
-        </label>
-        <button type="submit">Найти</button>
+          <div>
+            <label for="in">Дата заезда:</label>
+            <input type="text" id="in" name="arrive" placeholder="24 апреля 2017">
+          </div>
+
+          <div>
+            <label for="out">Дата выезда:</label>
+            <input type="text" id="out" name="depart" placeholder="4 июля 2017">
+          </div>
+          <div>
+            <div>
+              <label for="adlt">Взрослые:</label>
+              <input type="number" id="adlt" name="adults" placeholder="2">
+            </div>
+
+            <div>
+              <label for="child">Дети:</label>
+              <input type="number" id="child" name="children" placeholder="0">
+
+            </div>
+          </div>
+          <button class="date-search-submit button-blue" type="submit">Найти</button>
         </fieldset>
       </form>
 

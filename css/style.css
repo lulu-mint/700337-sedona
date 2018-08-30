@@ -59,7 +59,7 @@ a {
 
 .main-nav ul {
   margin: 0;
-  padding: 10px 5%;
+  padding: 15px 6%;
 
   width: 100%;
   list-style: none;
@@ -128,17 +128,14 @@ a {
 .features-text {
   margin: 0 auto;
   width: 566px;
-  padding: 0 10px;
+  padding: 57px 0 51px;
   text-align: center;
   box-sizing: border-box;
-
-  border: 1px solid red;
 }
 
 .features-text .caption {
   margin: 0;
   padding: 0;
-  padding-top: 10px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -166,33 +163,41 @@ a {
 .features-item div.blue {
   margin: 0;
   text-align: center;
-  min-height: 255px;
+  min-height: 256px;
   width: 33.33%;
   box-sizing: border-box;
-  border: 1px solid red;
-
-  padding-top: 45px;
-  padding-left: 4%;
-  padding-right: 4%;
-  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 45px 4% 40px;
 }
-
+.features-item{
+  padding: 45px 6% 40px;
+  background-color: #f2f2f2;
+}
 .features-item h3 {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  width: 160px;
 
   font-size: 21px;
   line-height: 21px;
   color: #000000;
 }
+.feature-number{
+  /*
+  padding: 23px 0 17px;
+  */
+  padding: 0;
+  padding-top: 23px;
+}
 
 .features-item p {
-  margin: 0;
+  margin: 0 auto;
+  margin-top: 20px;
   padding: 0;
 
   font-size: 14px;
   line-height: 21px;
-  border: 1px solid red;
 }
 
 .features-item-blue {
@@ -207,12 +212,49 @@ a {
 .features-item-blue h3 {
   color: #ffffff;
 }
-
 .features-item div.blue {
   background-color: #81b3d2;
   color: #ffffff;
 }
+.features-item-middle{
+  margin-top: 73px;
+  padding-left: 4.8%;
+  padding-right: 4.8%;
 
+  background-color: #ffffff;
+}
+.features-item-middle h3{
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+.features-item-middle h3::after {
+  content: "";
+
+  position: absolute;
+  top: -102px;
+  left: 25%;
+  width: 80px;
+  height: 80px;
+}
+.pic-house h3::after{
+  background-image: url("../img/icon-1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pic-burger h3::after{
+  background-image: url("../img/icon-3.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+.pic-present h3::after{
+  background-image: url("../img/icon-2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  top: -105px;
+
+}
 .img-accomodation {
   background-image: url("../img/accomodation.jpg");
   width: 66.67%;
@@ -240,20 +282,21 @@ a {
 }
 
 /* ЗАИНТЕРЕСОВАЛИСЬ? ФОРМА БРОНИ */
-
+.search-by-date{
+  position: relative;
+}
 .text-box {
   margin: 0 auto;
   padding: 0;
 
   text-align: center;
   width: 566px;
-
-  border: 1px solid red;
 }
 
 .text-box h3 {
   margin: 0;
   padding: 0;
+  margin-top: 52px;
 
   font-size: 30px;
   line-height: 36px;
@@ -263,18 +306,89 @@ a {
 .text-box p {
   margin: 0;
   padding: 0;
+  padding-top: 24px;
 
   font-size: 14px;
   line-height: 24px;
 }
-
-.date {
-  margin: 0 auto;
-  padding: 0;
-
-  width: 566px;
+.button-date-search{
+  margin: 0;
+  margin-top: 45px;
+  padding: 30px 0;
+  width: 100%;
+  border: none;
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
+.date {
+  position: absolute;
+  top:239px;
+  left: 26.4%;
+  margin: 0;
+  padding: 52px 45px 45px;
+  width: 566px;
+  box-sizing: border-box;
+  background-color: #ffffff;
 
+}
+.date fieldset {
+  margin: 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.date fieldset div{
+  margin: 0;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.date input[type="text"]{
+  margin: 0;
+  padding: 8px 12px;
+  width: 345px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  background-color:#f2f2f2;
+  border: none;
+}
+.date input::placeholder {
+  color: #000000;
+  text-transform: uppercase;
+}
+.date input[type="number"]{
+  width: 45px;
+  padding: 11px;
+  background-color:#f2f2f2;
+  border: none;
+}
+.date label{
+  margin: 0;
+padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #000000;
+}
+.date-search-submit{
+  margin: 0;
+  margin-top: -5px;
+  padding: 16px 0;
+  width: 100%;
+  border: none;
+  color: #ffffff;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
 /* ПОДВАЛЬЧЕГ */
 footer {
   margin: 0;
@@ -285,7 +399,9 @@ footer {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(255,255,2550.7);
+  /*
+  background-color: rgba(255,255,255,0.7);
+  */
 }
 
 .social {
