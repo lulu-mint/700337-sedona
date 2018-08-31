@@ -445,12 +445,16 @@ footer {
 }
 
 .filter fieldset {
-  margin: 27px 0;
-  margin-right: 10%;
+  margin: 0;
+  margin-top: 27px;
+  margin-right: 8.7%;
   border: none;
 }
 
 .filter legend {
+  margin: 0;
+  margin-bottom: 21px;
+  padding: 0;
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
@@ -465,7 +469,40 @@ footer {
   line-height: 21px;
 }
 .filter li{
-  margin-top: 20px;
+  margin-bottom: 25px;
+  padding-left: 40px;
+  position: relative;
+}
+.filter li:last-child{
+  margin-bottom: 22px;
+}
+.filter-input-checkbox + label::before{
+  content: "";
+
+  position: absolute;
+  top: -1px;
+  left: 0;
+
+  width: 23px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.filter-input-checkbox:checked + label::before{
+  content: "";
+
+  position: absolute;
+  top: -1px;
+  left: 0;
+
+  width: 27px;
+  height: 27px;
+
+  background-image: url("../img/checkbox-on.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .filter-input:hover + label,
 .filter-input:focus + label {
@@ -479,6 +516,7 @@ footer {
   margin-bottom: 0;
   margin-top: 27px;
   margin-left: auto;
+  margin-right: 8px;
   padding: 0;
 
   display: flex;
@@ -605,7 +643,7 @@ footer {
   margin: 0 auto;
   padding: 0;
   width: 138px;
-  height: 38px;
+  height: 36px;
   text-align: center;
   color: #ffffff;
   background-color: transparent;
