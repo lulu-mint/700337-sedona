@@ -391,36 +391,69 @@ padding: 0;
 }
 /* ПОДВАЛЬЧЕГ */
 footer {
-  margin: 0;
+  margin: 0 8%;
   padding: 0;
 
+  min-height: 120px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   /*
   background-color: rgba(255,255,255,0.7);
   */
 }
-
+footer .caption{
+  margin-left: 36px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
 .social {
+  margin-left: -15px;
   list-style: none;
   display: flex;
 }
 .social li{
-  margin: 4px;
+  margin: 3px;
 }
 .social li:nth-child(3n){
   margin-right: 0;
 }
+.social-btn{
+  width: 45px;
+  height: 48px;
+  background-color: #81b3d2;
+}
+.social-btn.tw{
+  background-image: url("../img/twitter.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.social-btn.fb{
+  background-image: url("../img/fb-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.social-btn.yt{
+  background-image: url("../img/youtube.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
 .link-academy {
+  margin-right: 5px;
+  font-size: 14px;
+  line-height: 26px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
-  border: 1px solid red;
+}
+.link-academy a{
+  padding-left: 7px;
 }
 
 /* ФИЛЬТРЫ */
@@ -658,15 +691,16 @@ footer {
 }
 .sort-results{
   margin: 0;
-  padding: 35px 5%;
+  padding: 29px 6%;
   display: flex;
+  align-items: baseline;
 }
 .sort-results .caption{
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
-  margin-right: 45px;
+  margin-right: 48px;
 }
 .sort-results p{
   margin: 0;
@@ -674,7 +708,7 @@ footer {
   font-size: 12px;
   line-height: 18px;
   color: #000000;
-  margin-right: 38px;
+  margin-right: 40px;
 }
 .sort-results ul{
   margin: 0;
@@ -686,6 +720,9 @@ footer {
 }
 .sort-results li{
   margin-right: 34px;
+}
+.sort-results li:first-child{
+  margin-right: 32px;
 }
 .sort-results a{
   font-size: 12px;
@@ -707,7 +744,7 @@ footer {
 /* ОФОРМЛЕНИЕ "КАРТОЧЕК" ОТЕЛЕЙ */
 .accomodation-preview{
   margin: 0;
-  padding: 30px 5%;
+  padding: 30px 6% 28px;
   display: flex;
   border-top: 1px solid #e5e5e5;
 }
@@ -717,7 +754,7 @@ footer {
 .accomodation-preview img{
   margin: 0;
   padding: 0;
-  padding-right: 30px;
+  padding-right: 27px;
 }
 .accomodation-preview .ap-column{
   margin: 0;
@@ -730,6 +767,9 @@ footer {
 }
 .accomodation-preview h3{
   margin: 0;
+  margin-top: -7px;
+  margin-left:4px;
+  margin-bottom: 5px;
   padding: 0;
   font-size: 21px;
   line-height: 26px;
@@ -742,9 +782,12 @@ footer {
 .accomodation-preview .caption-link:active{
   color: rgba(0,0,0,0.3);
 }
-
-
-
+.ap-column-table .row td{
+  border-bottom: 9px solid transparent;
+}
+.ap-column-table td{
+  padding-right: 3px;
+}
 
 /* КНОПОЩКИ */
 
@@ -753,6 +796,7 @@ footer {
   padding: 5px 17px;
 
   font-size: 14px;
+  font-weight: 700;
   line-height: 21px;
   color: #ffffff;
 }
