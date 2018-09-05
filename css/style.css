@@ -389,6 +389,7 @@ a {
 
 .date input::placeholder {
   color: #000000;
+  opacity: 1;
   text-transform: uppercase;
 }
 
@@ -478,10 +479,27 @@ a {
 .plus::after {
   transform: rotate(90deg);
 }
+.btn:hover{
+  background-color: #ebebeb;
+}
+.btn:active{
+  background-color: #ffffff;
+}
+.minus:hover:before,
+.plus:hover:before,
+.plus:hover:after{
+  background-color: #000000;
+}
+.minus:active:before,
+.plus:active:before,
+.plus:active:after{
+  background-color: #81b3d2;
+}
+
 .date-search-submit {
   margin: 0;
-  margin-top: 55px;
-  padding: 16px 0;
+  margin-top: 54px;
+  padding: 16px 0 17px;
   width: 100%;
   border: none;
   color: #ffffff;
@@ -549,19 +567,18 @@ footer .caption {
 }
 
 .social {
-  width: 150px;
-  margin-left: -25px;
+  width: 160px;
+  margin-left: -14px;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .social li {
   margin: 0;
   margin-right: 7px;
-  margin-top: 3px;
-  text-align: center;
-  vertical-align: middle;
-  display: inline-block;
+  margin-top: 3px;/*
+  text-align: center;*/
 }
 
 .social li:nth-child(3n) {
@@ -569,11 +586,16 @@ footer .caption {
 }
 
 .social-btn {
-  width: 46px;
+  width: 45px;
   height: 48px;
   background-color: #81b3d2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.social-btn a{
+margin-top: 7px;
+}
 .social-btn:hover {
   background-color: #669ec0;
 }
@@ -588,7 +610,7 @@ footer .caption {
 
 .link-academy {
   width: 200px;
-  margin-right: 4px;
+  margin-right: 2px;
   margin-top: 2px;
   font-size: 14px;
   line-height: 26px;
