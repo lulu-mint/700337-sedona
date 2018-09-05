@@ -108,6 +108,7 @@ a {
   background-image: url("../img/sedona-view.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0 -2px;
   padding-top: 75px;
   box-sizing: border-box;
 
@@ -123,11 +124,7 @@ a {
   margin: 0 auto;
   padding: 0;
 }
-/*.polygon{
-  background-image: url("../img/polygon.svg");
-  width: 100%;
-  height: 70px;
-}*/
+
 
 /* КВАДРАТИКИ */
 .features-text {
@@ -490,7 +487,8 @@ footer .caption{
 }
 
 .link-academy {
-  margin-right: 5px;
+  margin-right: 4px;
+  margin-top: 2px;
   font-size: 14px;
   line-height: 26px;
   display: flex;
@@ -501,7 +499,7 @@ footer .caption{
 .link-academy a{
   padding-left: 9px;
 }
-.link-academy img{
+.link-academy svg{
   margin-top: 7px;
 }
 
