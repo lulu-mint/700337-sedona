@@ -124,7 +124,6 @@ a {
   padding: 0;
 }
 
-
 /* КВАДРАТИКИ */
 .features-text {
   margin: 0 auto;
@@ -171,10 +170,12 @@ a {
   flex-direction: column;
   padding: 45px 4% 40px;
 }
-.features-item{
+
+.features-item {
   padding: 45px 6% 40px;
   background-color: #f2f2f2;
 }
+
 .features-item h3 {
   margin: 0 auto;
   padding: 0;
@@ -184,7 +185,8 @@ a {
   line-height: 21px;
   color: #000000;
 }
-.feature-number{
+
+.feature-number {
   /*
   padding: 23px 0 17px;
   */
@@ -213,22 +215,26 @@ a {
 .features-item-blue h3 {
   color: #ffffff;
 }
+
 .features-item div.blue {
   background-color: #81b3d2;
   color: #ffffff;
 }
-.features-item-middle{
+
+.features-item-middle {
   margin-top: 73px;
   padding-left: 4.8%;
   padding-right: 4.8%;
 
   background-color: #ffffff;
 }
-.features-item-middle h3{
+
+.features-item-middle h3 {
   position: relative;
   margin-top: 40px;
   margin-bottom: 5px;
 }
+
 .features-item-middle h3::after {
   content: "";
 
@@ -238,24 +244,28 @@ a {
   width: 80px;
   height: 80px;
 }
-.pic-house h3::after{
+
+.pic-house h3::after {
   background-image: url("../img/icon-1.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
-.pic-burger h3::after{
+
+.pic-burger h3::after {
   background-image: url("../img/icon-3.svg");
   background-repeat: no-repeat;
   background-position: center;
 
 }
-.pic-present h3::after{
+
+.pic-present h3::after {
   background-image: url("../img/icon-2.svg");
   background-repeat: no-repeat;
   background-position: center;
   top: -105px;
 
 }
+
 .img-accomodation {
   background-image: url("../img/accomodation.jpg");
   width: 66.67%;
@@ -311,7 +321,8 @@ a {
   font-size: 14px;
   line-height: 24px;
 }
-.button-date-search{
+
+.button-date-search {
   margin: 0;
   margin-top: 45px;
   padding: 30px 0;
@@ -323,9 +334,10 @@ a {
   font-weight: 700;
   text-transform: uppercase;
 }
-.date {
+
+.date-form {
   position: absolute;
-  top:239px;
+  top: 238px;
   right: 0;
   margin: 0;
   padding: 52px 45px 45px;
@@ -333,73 +345,142 @@ a {
   box-sizing: border-box;
   background-color: #ffffff;
   z-index: 4;
-
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
-.date fieldset {
+
+.date {
   margin: 0;
   border: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.date fieldset .row{
+
+.date .row {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  position: relative;
 }
-.date fieldset .half-row{
-  height: 40px;
-  border: 1px solid;
-}
-.date .calendar[type="text"]{
+
+.date label {
   margin: 0;
-  padding: 8px 12px;
-  width: 345px;
-  box-sizing: border-box;
+  padding: 0;
   font-size: 14px;
   line-height: 21px;
   font-weight: 700;
-  background-color:#f2f2f2;
-  border: none;
-  position: relative;
+  color: #000000;
 }
+
+.date input {
+  margin: 0;
+  padding: 7px 12px;
+  width: 345px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  background-color: #f2f2f2;
+  position: relative;
+  border: 2px solid #f2f2f2;
+  box-sizing: border-box;
+}
+
 .date input::placeholder {
   color: #000000;
   text-transform: uppercase;
 }
-.date .half-row input{
-  margin: 0;
-  width: 20px;
-  padding: 11px;
-  background-color:#f2f2f2;
-  border: none;
+
+.date input:hover {
+  border-color: #ebebeb;
+  background-color: #ebebeb;
 }
-.date .calendar + label::before{
-  content: "";
+
+.date input:focus {
+  border-color: #ebebeb;
+  background-color: #ffffff;
+}
+
+.calendar {
   position: absolute;
-  top: -1px;
-  left: 0;
+  top: 7px;
+  right: 7px;
+}
+.calendar path{
+  fill: #a9a9a9;
+}
+.calendar:hover path{
+  fill: #000000;
+}
+.calendar:active path{
+  fill: #81b3d2;
+}
+ .half-row {
+  height: 38px;
+  display: flex;
+  align-items: baseline;
+}
+
+.half-row input {
+  margin: 0;
+  width: 40px;
+  height: 38px;
+  background-color: #f2f2f2;
+  border: none;
+  text-align: center;
+}
+.half-row:first-child label{
+  margin-right: 40px;
+}
+.half-row label{
+  margin-right: 27px;
+}
+
+.btn {
   margin: 0;
   padding: 0;
-  width: 35px;
-  height: 40px;
+  width: 39px;
+  height: 38px;
+  background-color: #f2f2f2;
   border: none;
   align-self: center;
-  background-color: red;
+  position: relative;
 }
-.date label{
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 700;
-  color: #000000;
+.half-row:last-child .plus{
+  width: 37px;
 }
-.date-search-submit{
+.minus::before {
+  content: "";
+
+  position: absolute;
+  top: 18px;
+  left: 13px;
+
+  width: 12px;
+  height: 2px;
+
+  background-color: #a9a9a9;
+}
+.plus::before,
+.plus::after {
+  content: "";
+
+  position: absolute;
+  top: 18px;
+  left: 13px;
+
+  width: 12px;
+  height: 2px;
+
+  background-color: #a9a9a9;
+}
+.plus::after {
+  transform: rotate(90deg);
+}
+.date-search-submit {
   margin: 0;
-  margin-top: -5px;
+  margin-top: 55px;
   padding: 16px 0;
   width: 100%;
   border: none;
@@ -409,16 +490,11 @@ a {
   font-weight: 700;
   text-transform: uppercase;
 }
-.btn{
-  margin: 0;
-  padding: 0;
-  width: 35px;
-  height: 40px;
-  background-color: #f2f2f2;
-  border: none;
-  align-self: center;
+.minus{
+  margin-right: -4px;
 }
-.map{
+
+.map {
   position: relative;
 }
 
@@ -437,6 +513,7 @@ a {
 
   border: none;
 }
+
 /* ПОДВАЛЬЧЕГ */
 footer {
   margin: 0 8%;
@@ -450,7 +527,8 @@ footer {
   align-items: center;
   z-index: 4;
 }
-.index-footer{
+
+.index-footer {
   margin: 0;
   padding: 0 8%;
 
@@ -459,52 +537,52 @@ footer {
   position: absolute;
   bottom: 0;
   right: 0;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
-footer .caption{
-  width: 200px;
+footer .caption {
+  width: 150px;
   margin-left: 36px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
 }
+
 .social {
-  width: 256px;
-  margin-left: -15px;
+  width: 150px;
+  margin-left: -25px;
   list-style: none;
   display: flex;
 }
-.social li{
-  margin: 3px;
+
+.social li {
+  margin: 0;
+  margin-right: 7px;
+  margin-top: 3px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
 }
-.social li:nth-child(3n){
+
+.social li:nth-child(3n) {
   margin-right: 0;
 }
-.social-btn{
-  width: 45px;
+
+.social-btn {
+  width: 46px;
   height: 48px;
   background-color: #81b3d2;
 }
-/*.social-btn.tw{
-  background-image: url("../img/twitter.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.social-btn.fb{
-  background-image: url("../img/fb-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.social-btn.yt{
-  background-image: url("../img/youtube.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}*/
-.social-btn:hover{
+
+.social-btn:hover {
   background-color: #669ec0;
 }
-.social-btn:active{
+
+.social-btn:active path {
+  fill: #88b6d1;
+}
+
+.social-btn:active {
   background-color: #5496bd;
 }
 
@@ -519,16 +597,20 @@ footer .caption{
   justify-content: center;
   align-items: center;
 }
-.link-academy a{
+
+.link-academy a {
   padding-left: 9px;
 }
-.link-academy svg{
+
+.link-academy svg {
   margin-top: 7px;
 }
-.link-academy a:hover path{
+
+.link-academy a:hover path {
   fill: #81b3d2;
 }
-.link-academy a:active path{
+
+.link-academy a:active path {
   fill: #bdbbbc;
 }
 
@@ -577,15 +659,18 @@ footer .caption{
   font-size: 14px;
   line-height: 21px;
 }
-.filter li{
+
+.filter li {
   margin-bottom: 25px;
   padding-left: 40px;
   position: relative;
 }
-.filter li:last-child{
+
+.filter li:last-child {
   margin-bottom: 22px;
 }
-.filter-input-checkbox + label::before{
+
+.filter-input-checkbox + label::before {
   content: "";
 
   position: absolute;
@@ -599,7 +684,8 @@ footer .caption{
   background-size: contain;
   background-repeat: no-repeat;
 }
-.filter-input-checkbox:checked + label::before{
+
+.filter-input-checkbox:checked + label::before {
   content: "";
 
   position: absolute;
@@ -613,6 +699,7 @@ footer .caption{
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 .filter-input:hover + label,
 .filter-input:focus + label {
   color: #ffffff;
@@ -621,7 +708,8 @@ footer .caption{
 .filter-input:disabled + label {
   color: rgba(255, 255, 255, 0.35);
 }
-.filter div.right{
+
+.filter div.right {
   margin-bottom: 0;
   margin-top: 27px;
   margin-left: auto;
@@ -631,6 +719,7 @@ footer .caption{
   display: flex;
   flex-direction: column;
 }
+
 .filter-range {
   width: 320px;
   color: #ffffff;
@@ -681,10 +770,11 @@ footer .caption{
   cursor: pointer;
 }
 
-.price-controls .min-price{
+.price-controls .min-price {
   width: 90px;
   padding-left: 65px;
 }
+
 .price-controls .max-price {
   width: 90px;
   padding-left: 58px;
@@ -747,8 +837,7 @@ footer .caption{
   left: 80%;
 }
 
-
-.btn-transparent{
+.btn-transparent {
   margin: 0 auto;
   padding: 0;
   width: 138px;
@@ -760,25 +849,29 @@ footer .caption{
   text-transform: uppercase;
   cursor: pointer;
 }
+
 .btn-transparent:hover,
-.btn-transparent:active{
+.btn-transparent:active {
   background-color: #ffffff;
   color: #000000;
 }
-.sort-results{
+
+.sort-results {
   margin: 0;
   padding: 29px 6%;
   display: flex;
   align-items: baseline;
 }
-.sort-results .caption{
+
+.sort-results .caption {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
   margin-right: 48px;
 }
-.sort-results p{
+
+.sort-results p {
   margin: 0;
   padding: 0;
   font-size: 12px;
@@ -786,7 +879,8 @@ footer .caption{
   color: #000000;
   margin-right: 40px;
 }
-.sort-results ul{
+
+.sort-results ul {
   margin: 0;
   padding: 0;
 
@@ -794,57 +888,69 @@ footer .caption{
   display: flex;
   align-items: flex-end;
 }
-.sort-results li{
+
+.sort-results li {
   margin-right: 34px;
 }
-.sort-results li:first-child{
+
+.sort-results li:first-child {
   margin-right: 32px;
 }
-.sort-results a{
+
+.sort-results a {
   font-size: 12px;
   line-height: 18px;
-  color: rgba(0,0,0,0.3);
+  color: rgba(0, 0, 0, 0.3);
   border-bottom: 1px dotted #81b3d2;
 }
-.sort-results a:hover{
+
+.sort-results a:hover {
   color: #81b3d2;
 }
-.sort-results a:active{
+
+.sort-results a:active {
   color: #000000;
   border: none;
 }
-.sort-results a.current{
+
+.sort-results a.current {
   color: #81b3d2;
   border: none;
 }
+
 /* ОФОРМЛЕНИЕ "КАРТОЧЕК" ОТЕЛЕЙ */
-.accomodation-preview{
+.accomodation-preview {
   margin: 0;
   padding: 30px 6% 28px;
   display: flex;
   border-top: 1px solid #e5e5e5;
 }
-.accomodation-preview:last-of-type{
+
+.accomodation-preview:last-of-type {
   border-bottom: 1px solid #e5e5e5;
 }
-.accomodation-preview img{
+
+.accomodation-preview img {
   margin: 0;
   padding: 0;
   padding-right: 27px;
 }
-.accomodation-preview .ap-column{
+
+.accomodation-preview .ap-column {
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
-.accomodation-preview .ap-column:last-of-type{
+
+.accomodation-preview .ap-column:last-of-type {
   margin-left: auto;
 }
-.accomodation-preview h3{
+
+.accomodation-preview h3 {
   margin: 0;
   margin-top: -7px;
-  margin-left:4px;
+  margin-left: 4px;
   margin-bottom: 5px;
   padding: 0;
   font-size: 21px;
@@ -852,22 +958,25 @@ footer .caption{
   color: #000000;
 }
 
-.accomodation-preview .caption-link:hover{
+.accomodation-preview .caption-link:hover {
   color: #81b3d2;
 }
-.accomodation-preview .caption-link:active{
-  color: rgba(0,0,0,0.3);
+
+.accomodation-preview .caption-link:active {
+  color: rgba(0, 0, 0, 0.3);
 }
-.ap-column-table .row td{
+
+.ap-column-table .row td {
   border-bottom: 9px solid transparent;
 }
-.ap-column-table td{
+
+.ap-column-table td {
   padding-right: 3px;
 }
 
 /* КНОПОЩКИ */
 
-.button{
+.button {
   margin: 0;
   padding: 5px 17px;
 
@@ -876,25 +985,31 @@ footer .caption{
   line-height: 21px;
   color: #ffffff;
 }
-.button-blue{
+
+.button-blue {
   background-color: #81b3d2;
 }
-.button-brown{
+
+.button-brown {
   background-color: #766357;
 }
-.button-blue:hover{
+
+.button-blue:hover {
   background-color: #669ec0;
 }
-.button-blue:active{
+
+.button-blue:active {
   background-color: #5496bd;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
-.button-brown:hover{
+
+.button-brown:hover {
   background-color: #604e43;
 }
-.button-brown:active{
+
+.button-brown:active {
   background-color: #503e33;
-  color: rgba(255,255,255,0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 
