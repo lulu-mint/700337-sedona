@@ -47,6 +47,9 @@ a {
 
   background-color: #ffffff;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
 }
 
 .main-nav .logo {
@@ -54,31 +57,32 @@ a {
   padding: 0;
   position: absolute;
   top: 0;
-  left: 44%;
+  left: -70px;
 }
 
 .main-nav ul {
   margin: 0;
-  padding: 15px 6%;
+  padding: 15px 0;
 
-  width: 100%;
+  width: 40%;
   list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: space-around;
 }
 
-.main-nav li {
-  margin: 0;
-  margin-right: 7%;
-  padding: 0;
-
-  width: 120px;
-  float: left;
+.main-nav .left {
+  text-align: left;
 }
 
-.main-nav li:nth-child(even) {
+.main-nav .right {
   text-align: right;
-  float: right;
-  margin-left: 7%;
-  margin-right: 0;
+}
+
+.main-nav .middle-link {
+  position: relative;
 }
 
 .main-nav a {
@@ -408,16 +412,20 @@ a {
   top: 7px;
   right: 7px;
 }
-.calendar path{
+
+.calendar path {
   fill: #a9a9a9;
 }
-.calendar:hover path{
+
+.calendar:hover path {
   fill: #000000;
 }
-.calendar:active path{
+
+.calendar:active path {
   fill: #81b3d2;
 }
- .half-row {
+
+.half-row {
   height: 38px;
   display: flex;
   align-items: baseline;
@@ -431,10 +439,12 @@ a {
   border: none;
   text-align: center;
 }
-.half-row:first-child label{
+
+.half-row:first-child label {
   margin-right: 40px;
 }
-.half-row label{
+
+.half-row label {
   margin-right: 27px;
 }
 
@@ -448,9 +458,11 @@ a {
   align-self: center;
   position: relative;
 }
-.half-row:last-child .plus{
+
+.half-row:last-child .plus {
   width: 37px;
 }
+
 .minus::before {
   content: "";
 
@@ -463,6 +475,7 @@ a {
 
   background-color: #a9a9a9;
 }
+
 .plus::before,
 .plus::after {
   content: "";
@@ -476,23 +489,28 @@ a {
 
   background-color: #a9a9a9;
 }
+
 .plus::after {
   transform: rotate(90deg);
 }
-.btn:hover{
+
+.btn:hover {
   background-color: #ebebeb;
 }
-.btn:active{
+
+.btn:active {
   background-color: #ffffff;
 }
+
 .minus:hover:before,
 .plus:hover:before,
-.plus:hover:after{
+.plus:hover:after {
   background-color: #000000;
 }
+
 .minus:active:before,
 .plus:active:before,
-.plus:active:after{
+.plus:active:after {
   background-color: #81b3d2;
 }
 
@@ -508,8 +526,26 @@ a {
   font-weight: 700;
   text-transform: uppercase;
 }
-.minus{
+
+.minus {
   margin-right: -4px;
+}
+.date-animate{
+  animation: bounce 1.5s;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .map {
@@ -577,8 +613,9 @@ footer .caption {
 .social li {
   margin: 0;
   margin-right: 7px;
-  margin-top: 3px;/*
-  text-align: center;*/
+  margin-top: 3px;
+  /*
+    text-align: center;*/
 }
 
 .social li:nth-child(3n) {
@@ -593,9 +630,11 @@ footer .caption {
   justify-content: center;
   align-items: center;
 }
-.social-btn a{
-margin-top: 7px;
+
+.social-btn a {
+  margin-top: 7px;
 }
+
 .social-btn:hover {
   background-color: #669ec0;
 }
@@ -731,7 +770,7 @@ margin-top: 7px;
   color: rgba(255, 255, 255, 0.35);
 }
 
-.filter div.right {
+.filter div.filter-right {
   margin-bottom: 0;
   margin-top: 27px;
   margin-left: auto;
@@ -740,10 +779,11 @@ margin-top: 7px;
 
   display: flex;
   flex-direction: column;
+  width: 29.7%
 }
 
 .filter-range {
-  width: 320px;
+  width: 100%;
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -767,6 +807,9 @@ margin-top: 7px;
 
   border: 2px solid #ffffff;
   border-radius: 2px;
+
+  display: flex;
+  justify-content: flex-start;
 }
 
 .price-controls::after {
@@ -793,17 +836,17 @@ margin-top: 7px;
 }
 
 .price-controls .min-price {
-  width: 90px;
-  padding-left: 65px;
+  width: 30%;
+  margin-left: 20%;
+  margin-right: 17%;
 }
 
 .price-controls .max-price {
-  width: 90px;
-  padding-left: 58px;
+  width: 30%;
 }
 
 .price-controls input {
-  width: 50px;
+  width: 50%;
   margin: 0;
   margin-top: 6px;
 
@@ -860,7 +903,8 @@ margin-top: 7px;
 }
 
 .btn-transparent {
-  margin: 0 auto;
+  margin: 0;
+  margin-left: 26%;
   padding: 0;
   width: 138px;
   height: 36px;
@@ -940,6 +984,24 @@ margin-top: 7px;
   border: none;
 }
 
+.arrows-container {
+  margin-left: auto;
+}
+
+.arrows-container a {
+  border-bottom: none;
+  margin-left: 10px;
+}
+
+.arrow:hover path {
+  fill: #000000;
+}
+
+.current-arrow path,
+.arrow:active path {
+  fill: #81b3d2;
+}
+
 /* ОФОРМЛЕНИЕ "КАРТОЧЕК" ОТЕЛЕЙ */
 .accomodation-preview {
   margin: 0;
@@ -988,12 +1050,26 @@ margin-top: 7px;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.ap-column-table .row td {
+.ap-column-table tr:first-child td {
   border-bottom: 9px solid transparent;
 }
 
 .ap-column-table td {
   padding-right: 3px;
+}
+
+.stars {
+  text-align: right;
+}
+
+.stars object {
+  margin-left: 2px;
+}
+
+.rate {
+  margin-top: auto;
+  background-color: #f2f2f2;
+  padding: 2px 13px;
 }
 
 /* КНОПОЩКИ */

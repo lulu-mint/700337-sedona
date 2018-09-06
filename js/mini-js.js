@@ -1,0 +1,1 @@
+var button=document.querySelector(".button-date-search"),popup=document.querySelector(".date-form");button.addEventListener("click",function(e){e.preventDefault(),popup.classList.contains("visually-hidden")?(popup.classList.remove("visually-hidden"),popup.classList.add("date-animate")):(popup.classList.add("visually-hidden"),popup.classList.remove("date-animate"))})
